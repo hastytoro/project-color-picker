@@ -5,5 +5,112 @@
 }
 
 body {
+  font-family: "Roboto Mono", monospace;
+  color: rgb(51, 51, 51);
+  /* color: rgb(31, 33, 64); */
+}
+button {
   font-family: "Mali", cursive;
+}
+path,
+i,
+svg {
+  pointer-events: none;
+}
+
+.colors-wrapper {
+  min-height: 80vh;
+  display: flex;
+  /* border: solid 2px hotpink; placeholder */
+}
+/* target each color section */
+.color {
+  position: relative;
+  height: 80vh;
+  flex: 1;
+  /* centering content (inner) */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  /* hide slider's default transformed position */
+  overflow: hidden;
+}
+.color h2 {
+  font-family: "Mali", cursive;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.sliders {
+  position: absolute;
+  bottom: 0%;
+  border: solid 2px hotpink; /* placeholder */
+  padding: 1rem;
+  width: 80%;
+  background: white;
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+  /* centering content (inner) */
+  display: flex;
+  flex-direction: column;
+  /* we will be adjusting this transform */
+  opacity: 0; /* temp property */
+  transform: translateY(100px);
+  transition: all 0.5s ease-in-out;
+  /* hide overflow of close button */
+  overflow: hidden;
+}
+.sliders button {
+  position: absolute;
+  top: -5px;
+  right: 0px;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 0 1rem;
+  background: rgb(31, 33, 64);
+  color: white;
+}
+.sliders.active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: all;
+}
+/* custom slider configuration */
+
+.controls {
+  display: flex;
+  flex-direction: column;
+}
+.controls button {
+  font-size: 2rem;
+  border: none;
+  background: none;
+  color: rgb(31, 33, 64);
+  margin: 2rem 0rem;
+}
+
+.panels-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 20vh;
+}
+.panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.panel button {
+  font-size: 1.2rem;
+  margin: 1rem;
+  padding: 1rem 2rem;
+  background: rgb(31, 33, 64);
+  color: white;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+.panel p {
+  font-size: 1.2rem;
 }
