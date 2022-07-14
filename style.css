@@ -5,12 +5,12 @@
 }
 
 body {
-  font-family: "Roboto Mono", monospace;
+  font-family: "Muli", cursive;
   color: rgb(51, 51, 51);
   /* color: rgb(31, 33, 64); */
 }
 button {
-  font-family: "Mali", cursive;
+  font-family: "Muli", cursive;
 }
 path,
 i,
@@ -37,7 +37,7 @@ svg {
   overflow: hidden;
 }
 .color h2 {
-  font-family: "Mali", cursive;
+  font-family: "Muli", cursive;
   font-size: 2rem;
   cursor: pointer;
 }
@@ -45,7 +45,7 @@ svg {
 .sliders {
   position: absolute;
   bottom: 0%;
-  border: solid 2px hotpink; /* placeholder */
+  border: none;
   padding: 1rem;
   width: 80%;
   background: white;
@@ -54,9 +54,9 @@ svg {
   /* centering content (inner) */
   display: flex;
   flex-direction: column;
-  /* we will be adjusting this transform */
-  opacity: 0; /* temp property */
-  transform: translateY(100px);
+  /* We will be adjusting this transform */
+  /* opacity: 0;  */
+  /* transform: translateY(100px); */
   transition: all 0.5s ease-in-out;
   /* hide overflow of close button */
   overflow: hidden;
@@ -77,6 +77,14 @@ svg {
   pointer-events: all;
 }
 /* custom slider configuration */
+input[type="range"] {
+  -webkit-appearance: none;
+  margin: 1rem 0rem;
+  width: 100%;
+  position: relative;
+  border-radius: 1rem;
+  cursor: pointer;
+}
 
 .controls {
   display: flex;
@@ -112,5 +120,6 @@ svg {
   border-radius: 5px;
 }
 .panel p {
+  /* font-weight: bold; */
   font-size: 1.2rem;
 }
