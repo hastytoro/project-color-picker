@@ -9,7 +9,10 @@
       rel="stylesheet"
     /> -->
     <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet"> -->
-    <link href="https://fonts.googleapis.com/css?family=Muli:400,700&amp;display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Muli:400,700&amp;display=swap"
+      rel="stylesheet"
+    />
     <!-- <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet"> -->
     <link
       rel="stylesheet"
@@ -243,7 +246,7 @@
     <!-- ! panel options level -->
     <div class="panels-wrapper">
       <div class="library-panel panel">
-        <button class="library"><i class="fas fa-book-open"></i></button>
+        <button class="library"><i class="fa-solid fa-book"></i></button>
         <p>Library</p>
       </div>
       <div class="generate-panel panel">
@@ -251,30 +254,38 @@
         <p>Generate</p>
       </div>
       <div class="save-panel panel">
-        <button class="save"><i class="fas fa-save"></i></button>
+        <button class="save"><i class="fas fa-file-circle-question"></i></button>
         <p>Save</p>
       </div>
     </div>
     <!-- ! modal options level -->
     <div class="copy-wrapper">
-      <div class="copy-popup"></div>
-      <h4>Copied to clipboard!</h4>
-      <h3>&#128077</h3>
+      <div class="copy-popup">
+        <h4>Copied to clipboard!</h4>
+        <h1>&#128077</h1>
+      </div>
     </div>
     <div class="save-wrapper">
-      <div class="save-popup"></div>
-      <button class="close-save">x</button>
-      <h4>Give a name to your pallet!</h4>
-      <input type="text" maxlength="35" class="save-name">
-      <button type="submit" class="submit-save" >Save</button>
+      <div class="save-popup">
+        <button class="close-save">x</button>
+        <h4>Give a name to your pallet!</h4>
+        <input type="text" maxlength="35" class="save-name" />
+        <button type="submit" class="submit-save">Save</button>
+      </div>
     </div>
     <div class="library-wrapper">
-      <div class="library-popup"></div>
-      <button class="close-library">x</button>
-      <h4>Pick your pallet!</h4>
-      <!-- add content here dynamically -->
+      <div class="library-popup">
+        <button class="close-library">x</button>
+        <h4>Pick your pallet!</h4>
+        <!-- add content here dynamically -->
+      </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.4.2/chroma.min.js" integrity="sha512-zInFF17qBFVvvvFpIfeBzo7Tj7+rQxLeTJDmbxjBz5/zIr89YVbTNelNhdTT+/DCrxoVzBeUPVFJsczKbB7sew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.4.2/chroma.min.js"
+      integrity="sha512-zInFF17qBFVvvvFpIfeBzo7Tj7+rQxLeTJDmbxjBz5/zIr89YVbTNelNhdTT+/DCrxoVzBeUPVFJsczKbB7sew=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script src="app.js"></script>
   </body>
 </html>

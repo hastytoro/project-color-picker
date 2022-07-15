@@ -5,12 +5,12 @@
 }
 
 body {
-  font-family: "Muli", cursive;
+  font-family: "Muli";
   color: rgb(51, 51, 51);
   /* color: rgb(31, 33, 64); */
 }
 button {
-  font-family: "Muli", cursive;
+  font-family: "Muli";
 }
 path,
 i,
@@ -37,7 +37,7 @@ svg {
   overflow: hidden;
 }
 .color h2 {
-  font-family: "Muli", cursive;
+  font-family: "Muli";
   font-size: 2rem;
   cursor: pointer;
 }
@@ -51,17 +51,20 @@ svg {
   background: white;
   border-top-right-radius: 1rem;
   border-top-left-radius: 1rem;
+  pointer-events: none;
   /* centering content (inner) */
   display: flex;
   flex-direction: column;
   /* We will be adjusting this transform */
-  /* opacity: 0;  */
-  /* transform: translateY(100px); */
+  opacity: 0;
+  transform: translateY(100px);
   transition: all 0.5s ease-in-out;
   /* hide overflow of close button */
   overflow: hidden;
 }
-.sliders button {
+.sliders button,
+.close-save,
+.close-library {
   position: absolute;
   top: -5px;
   right: 0px;
@@ -110,7 +113,7 @@ input[type="range"] {
   align-items: center;
 }
 .panel button {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   margin: 1rem;
   padding: 1rem 2rem;
   background: rgb(31, 33, 64);
@@ -122,4 +125,63 @@ input[type="range"] {
 .panel p {
   /* font-weight: bold; */
   font-size: 1.2rem;
+}
+
+.copy-wrapper,
+.save-wrapper,
+.library-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  /* centering content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s ease-in-out;
+}
+
+.copy-wrapper.active,
+.save-wrapper.active,
+.library-wrapper.active {
+  opacity: 1;
+  pointer-events: all;
+}
+.copy-popup,
+.save-popup,
+.library-popup {
+  background: white;
+  min-width: 25%;
+  min-height: 25%;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  transition: transform 0.5s ease;
+  transform: translateY(-2rem);
+}
+.copy-popup.active {
+  transform: translateY(0);
+}
+
+.save-name {
+  font-size: 1rem;
+  padding: 0.4rem;
+}
+.close-save,
+.close-library {
+  top: 0;
+}
+.submit-save {
+  padding: 0.6rem;
+  border: none;
+  border-radius: 10px;
+  padding: 0.8rem 1.2rem;
+  background: rgb(31, 33, 64);
+  color: white;
 }
