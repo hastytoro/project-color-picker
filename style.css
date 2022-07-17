@@ -38,7 +38,7 @@ svg {
 }
 .color h2 {
   font-family: "Muli";
-  font-size: 2rem;
+  font-size: 1.8rem;
   cursor: pointer;
 }
 
@@ -183,5 +183,46 @@ input[type="range"] {
   border-radius: 10px;
   padding: 0.8rem 1.2rem;
   background: rgb(31, 33, 64);
+  color: white;
+}
+
+.library-popup {
+  min-width: 40%;
+  margin: 1rem;
+  padding: 2rem;
+  justify-content: flex-start;
+  overflow-y: scroll;
+  max-width: 50vh;
+}
+.library-popup h4 {
+  margin-bottom: 1rem;
+}
+.custom-palette {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+}
+.small-preview {
+  display: flex;
+  flex: 1;
+}
+.custom-palette h4 {
+  margin-left: 1rem;
+  flex: 1;
+}
+.small-preview div {
+  flex: 1;
+  height: 3rem;
+}
+.pick-palette-btn {
+  margin-left: 0.2rem;
+  height: 3rem;
+  border: none;
+  border-radius: 5px;
+  padding: 1rem;
+  cursor: pointer;
+  background: rgb(41, 41, 41);
   color: white;
 }
